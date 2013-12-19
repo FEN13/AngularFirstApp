@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="TodoApp" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="/Scripts/jquery/jquery-1.9.1.js"></script>
+    <script src="/Scripts/angular/angular.js"></script>
+    <script src="/Scripts/angular/angular-route.js"></script>
+    <script src="/Scripts/angular/angular-resource.js"></script>
+    <script src="/Scripts/angular/angular-animate.js"></script>
+    <script src="/Scripts/bootstrap/bootstrap.js"></script>
+    <script src="/Scripts/moment/moment.js"></script>
+    <script src="/Scripts/moment/moment-datepicker.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/controllers/listCtrl.js"></script>
+    <script src="/app/controllers/errorCtrl.js"></script>
+    <script src="/app/controllers/indexCtrl.js"></script>
+    <script src="/app/controllers/headerCtrl.js"></script>
+    <script src="/app/controllers/testCtrl.js"></script>
+    <script src="/app/services/services.js"></script>
+    <script src="/app/directives/directives.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/moment-datepicker/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/site.css" />
+    <title>Angular First App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../../Images/bullet.png" alt="logo" class="navbar-brand" />
+            <div class="collapse navbar-collapse" ng-controller="HeaderCtrl">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+                    <li ng-class="{ active: isActive('/todos')}"><a href="#/todos">Todos</a></li>
+                    <li ng-class="{ active: isActive('/test')}"><a href="#/test">Test</a></li>
+                </ul>
+            </div>
+        </header>
+        <div ng-view></div>
+    </div>
+</body>
+</html>
